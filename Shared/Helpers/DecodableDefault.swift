@@ -57,6 +57,10 @@ extension Default {
             static var defaultValue: Int { 0 }
         }
 
+        enum DashString: Source {
+            static var defaultValue: String { "-" }
+        }
+        
         enum EmptyString: Source {
             static var defaultValue: String { "" }
         }
@@ -76,6 +80,7 @@ extension Default {
     typealias True = Wrapper<Sources.True>
     typealias False = Wrapper<Sources.False>
     typealias Zero = Wrapper<Sources.Zero>
+    typealias Dash = Wrapper<Sources.DashString>
     typealias EmptyString = Wrapper<Sources.EmptyString>
     typealias EmptyList<T: List> = Wrapper<Sources.EmptyList<T>>
     typealias EmptyMap<T: Map> = Wrapper<Sources.EmptyMap<T>>

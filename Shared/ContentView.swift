@@ -18,17 +18,8 @@ struct ContentView: View {
     }
     
     var body: some View {
-//        VStack {
-//            Spacer()
-//            PizzaView(pizza: <#Pizza#>)
-//            Spacer()
-//            PizzaView(pizza: <#Pizza#>)
-//            Spacer()
-//        }
-        
         List(loadPizza()) { pizza in
             PizzaView(pizza: pizza)
-            Spacer()
         }
     }
 }
@@ -54,27 +45,33 @@ struct PizzaView: View {
                 ).frame(width: 100, height: 100, alignment: .center)
                 
                 VStack(alignment: .leading) {
-                    HStack {
-                        Text("name:")
-                            .font(.system(size: 12))
-                            .fontWeight(.semibold)
-                        Text(pizza.name)
-                            .font(.system(size: 12))
-                    }
-//                    Spacer()
-                    HStack {
-                        Text("description:")
-                            .font(.system(size: 12))
-                            .fontWeight(.semibold)
-                        Text(pizza.description)
-                            .font(.system(size: 12))
-                    }
+                    DetailView(title: "name", value: pizza.name)
+                    DetailView(title: "description", value: pizza.description)
+                    DetailView(title: "price", value: pizza.price.formatted())
+                    DetailView(title: "available", value: pizza.available.description)
+                    DetailView(title: "isBOGO", value: pizza.isBOGO.description)
                 }
                 
             }
         }.padding(.zero)
     }
 }
+
+struct DetailView: View {
+    var title: String
+    var value: String
+    
+    var body: some View {
+        HStack(alignment: .top) {
+            Text("\(title):")
+                .font(.system(size: 12))
+                .fontWeight(.semibold)
+            Text(value)
+                .font(.system(size: 12))
+        }.padding(.bottom)
+    }
+}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

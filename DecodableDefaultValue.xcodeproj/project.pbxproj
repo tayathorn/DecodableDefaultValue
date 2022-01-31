@@ -15,7 +15,6 @@
 		4AD5D92427A7BF3B007DDF9E /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD5D92327A7BF3B007DDF9E /* Pizza.swift */; };
 		4AD5D92627A7BF7F007DDF9E /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD5D92527A7BF7F007DDF9E /* Ingredient.swift */; };
 		4AD5D92927A7C1EB007DDF9E /* DecodableDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD5D92827A7C1EB007DDF9E /* DecodableDefault.swift */; };
-		4AD5D92E27A7CDBD007DDF9E /* ReadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD5D92D27A7CDBD007DDF9E /* ReadData.swift */; };
 		4AD5D93027A7D6A4007DDF9E /* pizzaData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4AD5D92B27A7CC4A007DDF9E /* pizzaData.json */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +40,6 @@
 		4AD5D92527A7BF7F007DDF9E /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		4AD5D92827A7C1EB007DDF9E /* DecodableDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableDefault.swift; sourceTree = "<group>"; };
 		4AD5D92B27A7CC4A007DDF9E /* pizzaData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pizzaData.json; sourceTree = "<group>"; };
-		4AD5D92D27A7CDBD007DDF9E /* ReadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				4AD5D92827A7C1EB007DDF9E /* DecodableDefault.swift */,
-				4AD5D92D27A7CDBD007DDF9E /* ReadData.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -233,7 +230,6 @@
 				4AD5D90D27A7BE2C007DDF9E /* ContentView.swift in Sources */,
 				4AD5D90B27A7BE2C007DDF9E /* DecodableDefaultValueApp.swift in Sources */,
 				4AD5D92427A7BF3B007DDF9E /* Pizza.swift in Sources */,
-				4AD5D92E27A7CDBD007DDF9E /* ReadData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
