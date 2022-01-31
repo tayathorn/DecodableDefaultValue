@@ -7,18 +7,20 @@
 
 struct Pizza: Decodable {
     let id: Int
-    let name: String
-    let description: String
-    let imageUrl: String
-    let ingredients: [Ingredient]
-//    var pizzaSize: Crust.Size = .medium
-    let price: Int
-//    var crustsAndSizes: [Crust]
-    let available: Bool
-    let quantity: Int
-
-
-
+    @Default.EmptyString var name: String
+    @Default.EmptyString var description: String
+    @Default.EmptyString var imageUrl: String
+    @Default.EmptyList var ingredients: [Ingredient]
+    @Default.Zero var price: Int
+    @Default.True var available: Bool
+    @Default.Zero var quantity: Int
+    @Default.False var isBOGO: Bool
+    
+    private enum CodingKeys: String, CodingKey {
+        case id, name, description, ingredients, price, available, quantity
+        case imageUrl = "image_url"
+        case isBOGO = "is_bogo"
+    }
 }
 
 
@@ -33,10 +35,12 @@ struct TraditionalPizza: Decodable {
     let price: Int
     let available: Bool
     let quantity: Int
+    let isBOGO: Bool
     
     private enum CodingKeys: String, CodingKey {
         case id, name, description, ingredients, price, available, quantity
         case imageUrl = "image_url"
+        case isBOGO = "is_bogo"
     }
     
     init(from decoder: Decoder) throws {
@@ -49,6 +53,7 @@ struct TraditionalPizza: Decodable {
         price = try container.decodeIfPresent(Int.self, forKey: .price) ?? 0
         available = try container.decodeIfPresent(Bool.self, forKey: .available) ?? true
         quantity = try container.decodeIfPresent(Int.self, forKey: .name) ?? 0
+        isBOGO = try container.decodeIfPresent(Bool.self, forKey: .isBOGO) ?? false
     }
     
 }

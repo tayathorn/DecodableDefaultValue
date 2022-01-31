@@ -14,6 +14,7 @@
 		4AD5D90F27A7BE2C007DDF9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AD5D8E527A7BE2B007DDF9E /* Assets.xcassets */; };
 		4AD5D92427A7BF3B007DDF9E /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD5D92327A7BF3B007DDF9E /* Pizza.swift */; };
 		4AD5D92627A7BF7F007DDF9E /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD5D92527A7BF7F007DDF9E /* Ingredient.swift */; };
+		4AD5D92927A7C1EB007DDF9E /* DecodableDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD5D92827A7C1EB007DDF9E /* DecodableDefault.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		4AD5D8FD27A7BE2C007DDF9E /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
 		4AD5D92327A7BF3B007DDF9E /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
 		4AD5D92527A7BF7F007DDF9E /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		4AD5D92827A7C1EB007DDF9E /* DecodableDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableDefault.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		4AD5D8E227A7BE2A007DDF9E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4AD5D92727A7C1DC007DDF9E /* Helpers */,
 				4AD5D92227A7BF33007DDF9E /* Models */,
 				4AD5D8E327A7BE2A007DDF9E /* DecodableDefaultValueApp.swift */,
 				4AD5D8E427A7BE2A007DDF9E /* ContentView.swift */,
@@ -101,6 +104,14 @@
 				4AD5D92527A7BF7F007DDF9E /* Ingredient.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4AD5D92727A7C1DC007DDF9E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4AD5D92827A7C1EB007DDF9E /* DecodableDefault.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AD5D92927A7C1EB007DDF9E /* DecodableDefault.swift in Sources */,
 				4AD5D92627A7BF7F007DDF9E /* Ingredient.swift in Sources */,
 				4AD5D90D27A7BE2C007DDF9E /* ContentView.swift in Sources */,
 				4AD5D90B27A7BE2C007DDF9E /* DecodableDefaultValueApp.swift in Sources */,
