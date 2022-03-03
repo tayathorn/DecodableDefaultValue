@@ -22,4 +22,8 @@ struct PizzaMock {
     static var emptyPizza: Pizza {
         pizzas[0]
     }
+    
+    static var pizzaWithEmptyIngredient: Pizza {
+        pizzas[1]
+    }
 }

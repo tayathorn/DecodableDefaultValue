@@ -9,7 +9,7 @@
 import XCTest
 
 final class DecodableDefaultTests: XCTestCase {
-    func testPizzaDefaultValue() {
+    func test_pizzaDefaultValue() {
         let pizza = PizzaMock.emptyPizza
         
         XCTAssertEqual(pizza.id, 1)
@@ -21,5 +21,17 @@ final class DecodableDefaultTests: XCTestCase {
         XCTAssertTrue(pizza.available)
         XCTAssertEqual(pizza.quantity, 0)
         XCTAssertFalse(pizza.isBOGO)
+    }
+    
+    func test_ingredientDefaultValue() {
+        let pizza = PizzaMock.pizzaWithEmptyIngredient
+        
+        XCTAssertEqual(pizza.id, 2)
+        XCTAssertEqual(pizza.ingredients.count, 1)
+        XCTAssertEqual(pizza.ingredients[0].id, 456)
+        XCTAssertEqual(pizza.ingredients[0].name, "")
+        XCTAssertEqual(pizza.ingredients[0].price, 0)
+        XCTAssertEqual(pizza.ingredients[0].quantity, 0)
+        XCTAssertTrue(pizza.ingredients[0].isDefault)
     }
 }

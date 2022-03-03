@@ -7,10 +7,10 @@
 
 struct Ingredient: Decodable {
     let id: Int
-    let name: String
-    let price: Int
-    let quantity: Int
-    let isDefault: Bool
+    @Default.EmptyString var name: String
+    @Default.Zero var price: Int
+    @Default.Zero var quantity: Int
+    @Default.True var isDefault: Bool
     
     private enum CodingKeys: String, CodingKey {
         case id, name, price, quantity
