@@ -60,4 +60,26 @@ final class DecodableDefaultTests: XCTestCase {
         XCTAssertEqual(pizza.ingredients[1].quantity, 1)
         XCTAssertFalse(pizza.ingredients[1].isDefault)
     }
+    
+    func test_directlyCreatePizza() {
+        let pizza = Pizza(id: 11,
+                          name: .init(wrappedValue: "Test"),
+                          description: .init(wrappedValue: "Test Pizza"),
+                          imageUrl: nil,
+                          ingredients: .init(),
+                          price: .init(wrappedValue: 999),
+                          available: .init(),
+                          quantity: .init(wrappedValue: 3),
+                          isBOGO: .init(wrappedValue: true))
+        
+        XCTAssertEqual(pizza.id, 11)
+        XCTAssertEqual(pizza.name, "Test")
+        XCTAssertEqual(pizza.description, "Test Pizza")
+        XCTAssertEqual(pizza.imageUrl?.absoluteString, nil)
+        XCTAssertEqual(pizza.ingredients.count, 0)
+        XCTAssertEqual(pizza.price, 999)
+        XCTAssertTrue(pizza.available)
+        XCTAssertEqual(pizza.quantity, 3)
+        XCTAssertTrue(pizza.isBOGO)
+    }
 }
