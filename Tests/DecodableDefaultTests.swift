@@ -9,20 +9,9 @@
 import XCTest
 
 final class DecodableDefaultTests: XCTestCase {
-    
-    var pizza: Pizza!
-    
-    override func setUp() {
-        let bundle = Bundle(for: type(of: self))
-        let url = bundle.url(forResource: "pizzaTest", withExtension: "json")!
-        let data = try! Data(contentsOf: url)
-        let decoder = JSONDecoder()
-        let pizzas = try? decoder.decode([Pizza].self, from: data)
-        
-        pizza = pizzas![0]
-    }
-    
     func testPizzaDefaultValue() {
+        let pizza = PizzaMock.emptyPizza
+        
         XCTAssertEqual(pizza.id, 1)
         XCTAssertEqual(pizza.name, "")
         XCTAssertEqual(pizza.description, "-")

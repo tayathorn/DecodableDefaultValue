@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4A8A16F927D07C2900157894 /* DecodableDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A16F827D07C2900157894 /* DecodableDefaultTests.swift */; };
 		4A8A16FF27D07C4600157894 /* pizzaTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A8A16F027D079D300157894 /* pizzaTest.json */; };
+		4A8A170127D07D8500157894 /* PizzaMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8A170027D07D8500157894 /* PizzaMock.swift */; };
 		4AD5D90B27A7BE2C007DDF9E /* DecodableDefaultValueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD5D8E327A7BE2A007DDF9E /* DecodableDefaultValueApp.swift */; };
 		4AD5D90D27A7BE2C007DDF9E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD5D8E427A7BE2A007DDF9E /* ContentView.swift */; };
 		4AD5D90F27A7BE2C007DDF9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AD5D8E527A7BE2B007DDF9E /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		4A8A16F027D079D300157894 /* pizzaTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pizzaTest.json; sourceTree = "<group>"; };
 		4A8A16F627D07C2900157894 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A8A16F827D07C2900157894 /* DecodableDefaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableDefaultTests.swift; sourceTree = "<group>"; };
+		4A8A170027D07D8500157894 /* PizzaMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaMock.swift; sourceTree = "<group>"; };
 		4AD5D8E327A7BE2A007DDF9E /* DecodableDefaultValueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableDefaultValueApp.swift; sourceTree = "<group>"; };
 		4AD5D8E427A7BE2A007DDF9E /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4AD5D8E527A7BE2B007DDF9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			children = (
 				4A8A16F027D079D300157894 /* pizzaTest.json */,
 				4A8A16F827D07C2900157894 /* DecodableDefaultTests.swift */,
+				4A8A170027D07D8500157894 /* PizzaMock.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A8A170127D07D8500157894 /* PizzaMock.swift in Sources */,
 				4A8A16F927D07C2900157894 /* DecodableDefaultTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
