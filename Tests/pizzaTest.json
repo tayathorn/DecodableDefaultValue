@@ -11,5 +11,31 @@
                 "id": 456
             }
         ]
+    },
+    {
+        "id": 3,
+        "name": "Double Pepperoni",
+        "description": "Pepperoni and Pizza Sauce",
+        "image_url": "https://1112.minorcdn.com/1112/public/images/products/pizza/Oct2021/102217_MP.png",
+        "ingredients": [
+            {
+                "id": 111,
+                "name": "Pepperoni",
+                "price": 49,
+                "quantity": 1,
+                "is_default": true
+            },
+            {
+                "id": 123,
+                "name": "Cheese",
+                "price": 49,
+                "quantity": 1,
+                "is_default": false
+            }
+        ],
+        "price": 329,
+        "available": true,
+        "quantity": 1,
+        "is_bogo": true
     }
 ]

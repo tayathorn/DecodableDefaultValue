@@ -34,4 +34,30 @@ final class DecodableDefaultTests: XCTestCase {
         XCTAssertEqual(pizza.ingredients[0].quantity, 0)
         XCTAssertTrue(pizza.ingredients[0].isDefault)
     }
+    
+    func test_pizzaWithIngredients() {
+        let pizza = PizzaMock.pizzaWithIngredients
+        
+        XCTAssertEqual(pizza.id, 3)
+        XCTAssertEqual(pizza.name, "Double Pepperoni")
+        XCTAssertEqual(pizza.description, "Pepperoni and Pizza Sauce")
+        XCTAssertEqual(pizza.imageUrl?.absoluteString, "https://1112.minorcdn.com/1112/public/images/products/pizza/Oct2021/102217_MP.png")
+        XCTAssertEqual(pizza.price, 329)
+        XCTAssertTrue(pizza.available)
+        XCTAssertEqual(pizza.quantity, 1)
+        XCTAssertTrue(pizza.isBOGO)
+        
+        XCTAssertEqual(pizza.ingredients.count, 2)
+        XCTAssertEqual(pizza.ingredients[0].id, 111)
+        XCTAssertEqual(pizza.ingredients[0].name, "Pepperoni")
+        XCTAssertEqual(pizza.ingredients[0].price, 49)
+        XCTAssertEqual(pizza.ingredients[0].quantity, 1)
+        XCTAssertTrue(pizza.ingredients[0].isDefault)
+        
+        XCTAssertEqual(pizza.ingredients[1].id, 123)
+        XCTAssertEqual(pizza.ingredients[1].name, "Cheese")
+        XCTAssertEqual(pizza.ingredients[1].price, 49)
+        XCTAssertEqual(pizza.ingredients[1].quantity, 1)
+        XCTAssertFalse(pizza.ingredients[1].isDefault)
+    }
 }
