@@ -1,10 +1,3 @@
-//
-//  DecodableDefaultTests.swift
-//  Tests iOS
-//
-//  Created by tayathorn on 3/3/2565 BE.
-//
-
 @testable import DecodableDefaultValue
 import XCTest
 

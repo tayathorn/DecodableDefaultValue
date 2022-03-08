@@ -1,10 +1,3 @@
-//
-//  PizzaMock.swift
-//  Tests
-//
-//  Created by tayathorn on 3/3/2565 BE.
-//
-
 @testable import DecodableDefaultValue
 import Foundation
 
