@@ -4,7 +4,8 @@ struct Pizza: Identifiable, Decodable {
     let id: Int
     @Default.EmptyString var name: String
     @Default.Dash var description: String
-    let imageUrl: URL?
+    let imageUrlString: String
+    var imageUrl: URL? { URL(string: imageUrlString) }
     @Default.EmptyList var ingredients: [Ingredient]
     @Default.Zero var price: Int
     @Default.True var available: Bool
@@ -13,7 +14,7 @@ struct Pizza: Identifiable, Decodable {
     
     private enum CodingKeys: String, CodingKey {
         case id, name, description, ingredients, price, available, quantity
-        case imageUrl = "image_url"
+        case imageUrlString = "image_url"
         case isBOGO = "is_bogo"
     }
 }

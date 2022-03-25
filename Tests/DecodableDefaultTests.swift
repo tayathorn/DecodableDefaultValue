@@ -58,7 +58,7 @@ final class DecodableDefaultTests: XCTestCase {
         let pizza = Pizza(id: 11,
                           name: .init(wrappedValue: "Test"),
                           description: .init(wrappedValue: "Test Pizza"),
-                          imageUrl: nil,
+                          imageUrlString: "",
                           ingredients: .init(),
                           price: .init(wrappedValue: 999),
                           available: .init(),
